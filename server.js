@@ -1,8 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
+const Recipe = require("./models/Recipe");
+const User = require("./models/User");
 require("dotenv").config({ path: "variables.env" });
 
+// Connect to DB
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
